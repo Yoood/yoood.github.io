@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>晒网</title>
+    <description>有事没事来晒晒网
+</description>
+    <link>http://b.athere.me/</link>
+    <atom:link href="http://b.athere.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 16 Jan 2015 23:32:34 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Jan 2015 23:32:34 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>php 笔记</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;数组定义&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;$arr = array();&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $fruit = array(&amp;quot;苹果&amp;quot;,&amp;quot;香蕉&amp;quot;,&amp;quot;菠萝&amp;quot;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $arr[0]=&amp;#39;苹果&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    array(&amp;#39;0&amp;#39;=&amp;gt;&amp;#39;苹果&amp;#39;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    array(&amp;#39;苹果&amp;#39;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    &lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $fruit = array(&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	$fruit0 = $fruit[&amp;#39;0&amp;#39;];&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    &lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $fruit=array(&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;菠萝&amp;#39;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	foreach($fruit as $k=&amp;gt;$v){&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    	echo &amp;#39;&amp;lt;br&amp;gt;第&amp;#39;.$k.&amp;#39;值是：&amp;#39;.$v;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	}&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    &lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $fruit = array(&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      &amp;#39;apple&amp;#39;=&amp;gt;&amp;quot;苹果&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      &amp;#39;banana&amp;#39;=&amp;gt;&amp;quot;香蕉&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      &amp;#39;pineapple&amp;#39;=&amp;gt;&amp;quot;菠萝&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	); &lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $arr[&amp;#39;apple&amp;#39;]=&amp;#39;苹果&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    array(&amp;#39;apple&amp;#39;=&amp;gt;&amp;#39;苹果&amp;#39;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    foreach($fruit as $k=&amp;gt;$v){&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    	echo &amp;#39;&amp;lt;br&amp;gt;水果的英文键名：&amp;#39;.$k.&amp;#39;，对应的值是：&amp;#39;.$v;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;function&quot;&gt;function&lt;/h2&gt;
+
+&lt;p&gt;可变函数&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;function name() {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    	echo &amp;#39;jobs&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $func = &amp;#39;name&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $func(); //调用可变函数&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    &lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    class book {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      function getName() {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;          return &amp;#39;bookname&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      }&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	}&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $func = &amp;#39;getName&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $book = new book();&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $book-&amp;gt;$func();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;判断函数是否存在&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;function func() {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    if (function_exists(&amp;#39;func&amp;#39;)){&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        echo &amp;#39;exists&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;    class MyClass{&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    // 使用前检查类是否存在&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    if (class_exists(&amp;#39;MyClass&amp;#39;)) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        $myclass = new MyClass();&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;    $filename = &amp;#39;test.txt&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    if (!file_exists($filename)) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        echo $filename . &amp;#39; not exists.&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;def print_hi(name)&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;  puts &amp;quot;Hi, #{name}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;print_hi(&amp;#39;Tom&amp;#39;)&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 17 Jan 2015 06:02:24 +0800</pubDate>
+        <link>http://b.athere.me/php/2015/01/17/php-note.html</link>
+        <guid isPermaLink="true">http://b.athere.me/php/2015/01/17/php-note.html</guid>
+        
+        
+        <category>php</category>
+        
+      </item>
+    
+  </channel>
+</rss>
